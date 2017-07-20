@@ -14,7 +14,7 @@ h1{
 }
 .main-header{
 	background-color:white;
-	border: solid black 5px ;
+	border:solid black 5px ;
 	width:1275px;
 	height: 80px;
 }
@@ -62,3 +62,4 @@ li:hover{
   }
 
 li a:hover{ color:red; }
+

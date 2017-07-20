@@ -1,14 +1,15 @@
-from flask import Flask ,render_template
+from flask import Flask ,render_template , request
 import random
 app= Flask(__name__)
 
+@app.route("/hello" , methods= ["POST"])
+def form_res():
+	user_firstname=request.form["firstname"]
+	user_lastname=request.form["lastname"]
+	user_massage=request.form["massage"]
+	return render_template('form_data.html',firstname=user_firstname , lastname=user_lastname , massage=user_massage)
+
 @app.route("/")
-def index ():
-	adjectives=["you are ugly" , "you are mean" , "you are beautifull" , "you have a great smile" , "your teeth are ugly"]
-	return render_template("home.html",you=random.choice(adjectives))
-
-
-@app.route("/home")
 def load1_page():
  	return render_template("home.html")
 

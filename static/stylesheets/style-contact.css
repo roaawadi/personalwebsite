@@ -1,0 +1,9 @@
+
+
+body{ background-color:darkred;}
+
+textarea{
+	resize:none;
+	height:70px;
+	width:250px;
+}
